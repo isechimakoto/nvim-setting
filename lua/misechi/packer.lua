@@ -62,6 +62,16 @@ return require('packer').startup(function(use)
 
     use { 'kevinhwang91/nvim-bqf', ft = "qf" }
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
+        require("toggleterm").setup({
+            open_mapping = [[<c-\>]],
+            direction = "float",
+        })
     end }
+
+    use {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup {}
+        end
+    }
 end)

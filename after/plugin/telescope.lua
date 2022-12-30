@@ -1,7 +1,7 @@
 local telescope = require('telescope')
-local actions = require('telescope.actions') 
+local actions = require('telescope.actions')
 telescope.load_extension('projects')
-telescope.setup{
+telescope.setup {
     defaults = {
         mappings = {
             i = {
@@ -21,7 +21,7 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>sr', builtin.oldfiles, {})
-vim.keymap.set('n', '<leader>st', builtin.live_grep) 
+vim.keymap.set('n', '<leader>st', builtin.live_grep)
 vim.keymap.set('n', '<leader>ls', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', '<leader>lS', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>P', function()

@@ -1,3 +1,6 @@
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'dw', 'vb"_d')
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 

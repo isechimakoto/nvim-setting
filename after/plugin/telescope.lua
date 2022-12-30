@@ -1,6 +1,7 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 telescope.load_extension('projects')
+telescope.load_extension('harpoon')
 telescope.setup {
     defaults = {
         mappings = {

@@ -93,14 +93,15 @@ return require('packer').startup(function(use)
                         opts.buffer = bufnr
                         vim.keymap.set(mode, l, r, opts)
                     end
-                    map('n', '<leader>gk', function ()
-                       gs.prev_hunk{ navigation_message = false }
+
+                    map('n', '<leader>gk', function()
+                        gs.prev_hunk { navigation_message = false }
                     end)
-                    map('n', '<leader>gj', function ()
-                       gs.next_hunk{ navigation_message = false }
+                    map('n', '<leader>gj', function()
+                        gs.next_hunk { navigation_message = false }
                     end)
-                    map('n', '<leader>gl', function ()
-                       gs.blame_line{ full = false }
+                    map('n', '<leader>gl', function()
+                        gs.blame_line { full = false }
                     end)
                     map('n', '<leader>gp', gs.preview_hunk)
                     map('n', '<leader>gr', gs.reset_hunk)
@@ -111,5 +112,10 @@ return require('packer').startup(function(use)
                 end
             })
         end
+    }
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
     }
 end)

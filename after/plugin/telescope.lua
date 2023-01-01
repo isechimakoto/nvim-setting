@@ -27,18 +27,65 @@ telescope.setup {
         ["<C-k>"] = actions.move_selection_previous,
       },
     },
-    path_display = { "smart" },
-    color_devicons = true,
-    set_env = { ["COLORTERM"] = "truecolor" },
-    extentions = {
-      fzf = {
-        fuzzy = true,
-        override_generic_sorter = true,
-        override_file_sorter = true,
-        case_mode = "smart_case",
-      }
+  },
+  pickers = {
+    oldfiles = {
+      theme = "dropdown",
+      previewer = false,
     },
-  }
+    find_files = {
+      theme = "dropdown",
+      previewer = false,
+    },
+    live_grep = {
+      only_sort_text = true,
+      theme = "dropdown",
+    },
+    grep_string = {
+      only_sort_text = true,
+      theme = "dropdown",
+    },
+    buffers = {
+      theme = "dropdown",
+      previewer = false,
+      mappings = {
+        i = {
+          ["<C-d>"] = actions.delete_buffer,
+        },
+        n = {
+          ["dd"] = actions.delete_buffer,
+        }
+      },
+    },
+    git_files = {
+      theme = "dropdown",
+      hidden = true,
+      show_untracked = true,
+    },
+    lsp_refereneces = {
+      theme = "dropdown",
+    },
+    lsp_definitions = {
+      theme = "dropdown",
+    },
+    lsp_declarations = {
+      theme = "dropdown",
+    },
+    lsp_implementations = {
+      theme = "dropdown",
+    },
+    lsp_document_symbols = {
+      theme = "dropdown",
+    },
+  },
+  extentions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    }
+  },
 }
 local builtin = require('telescope.builtin')
 

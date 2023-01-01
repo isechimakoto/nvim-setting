@@ -103,7 +103,7 @@ return require('packer').startup(function(use)
                         gs.next_hunk { navigation_message = false }
                     end)
                     map('n', '<leader>gl', function()
-                        gs.blame_line { full = false }
+                        gs.blame_line { full = true }
                     end)
                     map('n', '<leader>gp', gs.preview_hunk)
                     map('n', '<leader>gr', gs.reset_hunk)

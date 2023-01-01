@@ -1,2 +1,2 @@
-require("misechi/remap")
 require("misechi/set")
+require("misechi/remap")

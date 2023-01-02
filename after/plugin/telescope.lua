@@ -77,6 +77,11 @@ telescope.setup {
     lsp_document_symbols = {
       theme = "dropdown",
     },
+    current_buffer_fuzzy_find = {
+      theme = "dropdown",
+      winblend = 10,
+      previewer = false,
+    }
   },
   extentions = {
     fzf = {
@@ -99,3 +104,4 @@ vim.keymap.set('n', '<leader>gf', builtin.git_status, {})
 vim.keymap.set('n', '<leader>P', function()
   vim.cmd('Telescope projects')
 end)
+vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find)

@@ -18,5 +18,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
+vim.opt.list = true
+vim.opt.listchars = "tab:» ,trail:-"
 vim.g.mapleader = " "
 vim.o.mouse = ""

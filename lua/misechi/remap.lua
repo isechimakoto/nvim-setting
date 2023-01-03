@@ -32,8 +32,6 @@ vim.keymap.set("n", "<leader>S", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<C-c>", "<cmd>let @+ = expand('%')<CR>")
-vim.keymap.set("n", "<leader>lj", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<leader>lk", vim.diagnostic.goto_prev)
 
 vim.keymap.set("n", "<M-h>", "<C-w>h")
 vim.keymap.set("n", "<M-j>", "<C-w>j")
@@ -43,3 +41,6 @@ vim.keymap.set("n", "<M-H>", "<C-w><")
 vim.keymap.set("n", "<M-J>", "<C-w>-")
 vim.keymap.set("n", "<M-K>", "<C-w>+")
 vim.keymap.set("n", "<M-L>", "<C-w>>")
+
+vim.keymap.set("n", "+", "<C-a>")
+vim.keymap.set("n", "-", "<C-x>")

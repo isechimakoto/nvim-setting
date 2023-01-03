@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/home/misechi/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/misechi/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/misechi/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",

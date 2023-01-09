@@ -124,4 +124,5 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
 
   use({ "glepnir/lspsaga.nvim", branch = "version_2.3", })
+  use { "nvim-telescope/telescope-file-browser.nvim" }
 end)

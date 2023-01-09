@@ -22,3 +22,26 @@ vim.opt.list = true
 vim.opt.listchars = "tab:» ,trail:-"
 vim.g.mapleader = " "
 vim.o.mouse = ""
+
+local has = vim.fn.has
+local is_mac = has "macunix"
+local is_win = has "win32"
+
+if is_mac then
+  vim.opt.clipboard:append { 'unnamedplus' }
+end
+if is_win then
+  vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus'}
+  vim.g.clipboard = {
+    name = "xsel_override",
+    copy = {
+      ["+"] = "xsel --input --clipboard",
+      ["*"] = "xsel --input --primary",
+    },
+    paste = {
+      ["+"] = "xsel --output --clipboard",
+      ["*"] = "xsel --output --primary",
+    },
+    cache_enabled = 1,
+  }
+end

@@ -72,6 +72,7 @@ return require('packer').startup(function(use)
     config = function()
       require("project_nvim").setup {
         detection_methods = { "pattern" },
+        exclude_dirs = { "**/node_modules/*" },
       }
     end
   }

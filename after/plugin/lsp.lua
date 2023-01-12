@@ -39,7 +39,7 @@ lsp.on_attach(function(client, bufnr)
 
     vim.keymap.set("n", "<leader>lS", function() vim.lsp.buf.workspace_symbol() end, opts)
     vim.keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
-    vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+    -- vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
     vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
     vim.keymap.set({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>", opts)
     vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts)

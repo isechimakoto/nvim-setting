@@ -7,6 +7,10 @@ lsp.ensure_installed({
     'rust_analyzer',
 })
 
+lsp.configure('pyright', {
+  single_file_support = false,
+})
+
 lsp.configure('sumneko_lua', {
     settings = {
         Lua = {
@@ -52,7 +56,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>lJ", function()
       require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
     end, opts)
-    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+    -- vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 
 end)
 lsp.setup()

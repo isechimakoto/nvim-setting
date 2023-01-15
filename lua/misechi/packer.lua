@@ -126,4 +126,13 @@ return require('packer').startup(function(use)
 
   use({ "glepnir/lspsaga.nvim", branch = "version_2.3", })
   use { "nvim-telescope/telescope-file-browser.nvim" }
+
+  use('blindFS/vim-taskwarrior')
+  use('vim-airline/vim-airline')
+  use {
+    'Shougo/ddu.vim',
+    requires = {
+      'vim-denops/denops.vim'
+    }
+  }
 end)

@@ -98,7 +98,7 @@ vim.keymap.set("n", '<leader>e', function()
     hidden = true,
     grouped = true,
     previewer = false,
-    initial_mode = 'normal',
+    initial_mode = 'insert',
     layout_config = { width = 80 }
   })
 end)

@@ -124,15 +124,9 @@ return require('packer').startup(function(use)
 
   use('jose-elias-alvarez/null-ls.nvim')
 
-  use({ "glepnir/lspsaga.nvim", branch = "version_2.3", })
+  use({ "glepnir/lspsaga.nvim", branch = "main", })
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   use('blindFS/vim-taskwarrior')
   use('vim-airline/vim-airline')
-  use {
-    'Shougo/ddu.vim',
-    requires = {
-      'vim-denops/denops.vim'
-    }
-  }
 end)

@@ -1,7 +1,7 @@
 require "gitlinker".setup({
     opts = {
         -- adds current line nr in the url for normal mode
-        add_current_line_on_normal_mode = true,
+        -- add_current_line_on_normal_mode = true,
         -- print the url after performing the action
         print_url = true,
     },

@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   }
 
   use('nvim-treesitter/playground')
+  use 'nvim-treesitter/nvim-treesitter-context'
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
 
@@ -137,4 +138,17 @@ return require('packer').startup(function(use)
   use('blindFS/vim-taskwarrior')
   use('vim-airline/vim-airline')
   use { "gennaro-tedesco/nvim-jqx", ft = { "json", "yaml" }, }
+  use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons", }
+
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 end)

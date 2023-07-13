@@ -125,14 +125,15 @@ return require('packer').startup(function(use)
 
   use('jose-elias-alvarez/null-ls.nvim')
 
-  use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
+  use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
     requires = {
         {"nvim-tree/nvim-web-devicons"},
         {"nvim-treesitter/nvim-treesitter"}
     }
   })
+
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   use('blindFS/vim-taskwarrior')

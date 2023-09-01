@@ -28,6 +28,7 @@ telescope.setup {
         ["<C-k>"] = actions.move_selection_previous,
       },
     },
+    sorting_strategy = "ascending",
   },
   pickers = {
     oldfiles = {

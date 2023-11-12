@@ -60,7 +60,7 @@ telescope.setup {
     },
     current_buffer_fuzzy_find = {
       winblend = 10,
-      previewer = false,
+      -- previewer = false,
     },
   },
   extentions = {
